@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Wealth Code — Live Accelerator with Regan Hillyer</title>
+<meta name="description" content="Become a magnet for money. A two-evening live accelerator with Regan Hillyer, 25 & 26 July. Clear your money ceiling and learn to receive wealth in flow." />
+<style>
+  :root{
+    /* Brand */
+    --brand:#7A12D4; --brand-bright:#9B37F2; --brand-content:#680FB4;
+    --brand-dark:#4F0C8A; --brand-light:#F8EFFF; --brand-border:#EED8FE;
+    /* Support */
+    --green:#159F65; --green-content:#128756; --green-light:#E8F9F1;
+    --orange:#ED6325; --orange-content:#C9541F; --orange-light:#FFF4E9;
+    --pink:#DF1A6F; --pink-light:#FEEAF3; --blue-dark:#1832B4;
+    /* Neutral (cool grey) */
+    --grey-100:#F9F9F9; --grey-200:#F3F4F6; --grey-300:#CED1D7;
+    --grey-400:#979CA5; --grey-500:#595E67; --grey-600:#292D38; --ink:#0F131A;
+    /* Semantic */
+    --bg:#FFFFFF; --bg-muted:#F9F9F9; --bg-subtle:#F3F4F6; --surface:#FFFFFF;
+    --text:#0F131A; --text-muted:#595E67; --text-subtle:#71767F; --text-inverse:#FFFFFF;
+    --border:#DFE1E5; --border-strong:#CED1D7; --focus-ring:#9B37F2;
+    --dark-bg:#0F131A; --dark-bg-muted:#181D26; --dark-text:#FFFFFF; --dark-text-muted:#B3B8C1;
+    /* Elevation */
+    --shadow-light:0 4px 15px 0 rgba(0,0,0,0.05);
+    --shadow-medium:0 5px 20px 0 rgba(0,0,0,0.10);
+    --shadow-strong:0 15px 30px 0 rgba(0,0,0,0.20);
+    --shadow-focus:0 0 0 4px rgba(155,55,242,0.35);
+    /* Gradients */
+    --sunset:linear-gradient(135deg,#4F0C8A 0%,#DF1A6F 100%);
+    --dusk:linear-gradient(135deg,#4F0C8A 0%,#1832B4 100%);
+    --container:1280px;
+    --ease-standard:cubic-bezier(0.2,0,0,1);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Google Sans","Google Sans Text",sans-serif;
+    color:var(--text); background:var(--bg);
+    font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--brand); text-decoration:none}
+  img{display:block;max-width:100%}
+
+  .wrap{max-width:var(--container);margin:0 auto;padding:0 24px}
+
+  /* Type */
+  .overline{font-size:14px;font-weight:700;letter-spacing:0.08em;line-height:1;
+    text-transform:uppercase;color:var(--brand-content)}
+  .overline.on-dark{color:var(--brand-bright)}
+  h1,.display-1{font-size:96px;font-weight:700;line-height:1.1;letter-spacing:-0.02em}
+  .display-2{font-size:60px;font-weight:700;line-height:1.1;letter-spacing:-0.02em}
+  h2,.title-2{font-size:48px;font-weight:700;line-height:1.2;letter-spacing:-0.02em}
+  h3,.title-4{font-size:32px;font-weight:700;line-height:1.2}
+  .title-5{font-size:24px;font-weight:500;line-height:1.3}
+  .title-6{font-size:20px;font-weight:500;line-height:1.3}
+  .title-7{font-size:16px;font-weight:500;line-height:1.3}
+  .body-lg{font-size:22px;line-height:1.6;color:var(--text-muted)}
+  .body-md{font-size:16px;line-height:1.5;color:var(--text-muted)}
+  .body-sm{font-size:14px;line-height:1.5;color:var(--text-muted)}
+
+  /* Buttons (pills) */
+  .btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;
+    font-family:inherit;font-size:14px;font-weight:500;line-height:1.3;
+    border-radius:128px;padding:14px 28px;transition:all 200ms var(--ease-standard)}
+  .btn-lg{padding:18px 36px;font-size:16px}
+  .btn:focus-visible{outline:0;box-shadow:var(--shadow-focus)}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--brand);color:#fff}
+  .btn-primary:hover{background:var(--brand-content)}
+  .btn-inverse{background:#fff;color:var(--brand-dark)}
+  .btn-inverse:hover{background:var(--brand-light)}
+  .btn-ghost{background:transparent;color:var(--brand)}
+  .btn-ghost.on-dark{color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.4)}
+  .btn-ghost:hover{background:var(--brand-light)}
+  .btn-ghost.on-dark:hover{background:rgba(255,255,255,0.12)}
+
+  /* Badge */
+  .badge{display:inline-flex;align-items:center;gap:6px;border-radius:128px;
+    padding:6px 12px;font-size:12px;font-weight:500;
+    background:var(--brand-light);color:var(--brand-content)}
+  .badge.orange{background:var(--orange-light);color:var(--orange-content)}
+
+  /* Topbar */
+  .topbar{position:sticky;top:0;z-index:50;height:64px;background:#fff;
+    border-bottom:1px solid var(--border);display:flex;align-items:center}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+  .wordmark{font-size:20px;font-weight:700;letter-spacing:-0.01em;color:var(--ink)}
+  .wordmark span{color:var(--brand)}
+  .nav{display:flex;align-items:center;gap:28px}
+  .nav a{color:var(--text-muted);font-size:14px;font-weight:500}
+  .nav a:hover{color:var(--text)}
+
+  /* Sections */
+  section{padding:96px 0}
+  .section-head{max-width:760px;margin-bottom:48px}
+  .section-head .overline{display:block;margin-bottom:16px}
+  .section-head p{margin-top:16px}
+
+  /* Hero */
+  .hero{background:var(--dark-bg);color:var(--dark-text);position:relative;overflow:hidden;
+    padding:120px 0}
+  .hero::before{content:"";position:absolute;inset:0;background:var(--sunset);opacity:0.92}
+  .hero::after{content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 75% 30%,rgba(255,255,255,0.18),transparent 45%)}
+  .hero .wrap{position:relative;z-index:2;max-width:900px}
+  .hero h1{margin:20px 0;letter-spacing:-0.02em}
+  .hero .lede{font-size:22px;line-height:1.6;color:rgba(255,255,255,0.92);max-width:620px}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:24px;margin:32px 0 36px;
+    color:rgba(255,255,255,0.9);font-size:16px;font-weight:500}
+  .hero-meta div{display:flex;align-items:center;gap:8px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+  .icon{width:24px;height:24px;flex:0 0 24px;stroke:currentColor;fill:none;stroke-width:2;
+    stroke-linecap:round;stroke-linejoin:round}
+
+  /* Big idea */
+  .bigidea{background:var(--bg)}
+  .bigidea h2{max-width:900px}
+  .bigidea .accent{color:var(--brand)}
+
+  /* Reframe two columns */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .card{background:var(--surface);border-radius:16px;padding:24px;
+    box-shadow:var(--shadow-light);transition:all 320ms var(--ease-standard)}
+  .card.bordered{box-shadow:none;border:1px solid var(--border)}
+  .reframe-card{padding:32px}
+  .reframe-card h3{font-size:24px;margin-bottom:8px}
+  .reframe-card .tag{font-size:14px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:16px}
+  .reframe-card.old .tag{color:var(--grey-500)}
+  .reframe-card.new{background:var(--brand-light)}
+  .reframe-card.new .tag{color:var(--brand-content)}
+  .reframe-card ul{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:20px}
+  .reframe-card li{display:flex;gap:12px;font-size:16px;line-height:1.5}
+  .reframe-card li .icon{width:22px;height:22px;flex:0 0 22px;margin-top:1px}
+  .reframe-card.old li .icon{stroke:var(--grey-400)}
+  .reframe-card.new li .icon{stroke:var(--brand)}
+
+  /* Days */
+  .day-block{margin-bottom:48px}
+  .day-head{display:flex;align-items:baseline;justify-content:space-between;
+    flex-wrap:wrap;gap:8px;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+  .day-head h3{font-size:32px}
+  .day-head .when{color:var(--text-muted);font-size:16px;font-weight:500}
+  .sessions{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .session{background:var(--surface);border-radius:16px;padding:24px;
+    box-shadow:var(--shadow-light);transition:all 320ms var(--ease-standard)}
+  .session:hover{box-shadow:var(--shadow-strong);transform:translateY(-2px)}
+  .session .num{display:inline-flex;align-items:center;justify-content:center;
+    width:40px;height:40px;border-radius:128px;background:var(--brand-light);
+    color:var(--brand-content);font-weight:700;font-size:16px;margin-bottom:16px}
+  .session h4{font-size:20px;font-weight:500;line-height:1.3;margin-bottom:8px}
+
+  /* Regan */
+  .regan{display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;align-items:center}
+  .regan-photo{aspect-ratio:1/1;border-radius:16px;overflow:hidden;background:var(--brand-light);
+    display:flex;align-items:flex-end;padding:24px;
+    background-image:var(--dusk);color:#fff}
+  .regan-photo .ph{font-size:14px;color:rgba(255,255,255,0.85)}
+  .regan h2{margin-bottom:20px}
+
+  /* Outcomes */
+  .outcomes{background:var(--bg-muted)}
+  .outcome-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 40px}
+  .outcome{display:flex;gap:14px;align-items:flex-start}
+  .outcome .icon{stroke:var(--green);width:24px;height:24px}
+  .outcome p{font-size:18px;line-height:1.4;color:var(--text)}
+
+  /* Bonuses */
+  .bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .bonus .badge{margin-bottom:16px}
+  .bonus h4{font-size:20px;font-weight:500;margin-bottom:8px}
+
+  /* Logistics / enrol */
+  .enrol{background:var(--bg)}
+  .enrol-card{display:grid;grid-template-columns:1.2fr 1fr;gap:0;border-radius:24px;
+    overflow:hidden;box-shadow:var(--shadow-medium)}
+  .enrol-details{padding:48px}
+  .enrol-details h2{margin-bottom:24px}
+  .detail-row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--border)}
+  .detail-row:last-child{border-bottom:0}
+  .detail-row .icon{stroke:var(--brand);margin-top:2px}
+  .detail-row .k{font-weight:500;color:var(--text)}
+  .detail-row .v{color:var(--text-muted);font-size:15px}
+  .enrol-action{background:var(--dark-bg);background-image:var(--sunset);color:#fff;
+    padding:48px;display:flex;flex-direction:column;justify-content:center;gap:8px}
+  .enrol-action .price{font-size:60px;font-weight:700;line-height:1.1;letter-spacing:-0.02em}
+  .enrol-action .price small{font-size:18px;font-weight:400;color:rgba(255,255,255,0.85)}
+  .enrol-action .fine{color:rgba(255,255,255,0.85);font-size:14px;margin-top:4px}
+  .enrol-action .btn{margin-top:20px;justify-content:center}
+
+  /* FAQ */
+  .faq{background:var(--bg-muted)}
+  .faq-list{max-width:840px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+  .faq-item{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+  .faq-q{width:100%;text-align:left;background:none;border:0;cursor:pointer;
+    font-family:inherit;font-size:18px;font-weight:500;color:var(--text);
+    padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .faq-q .icon{stroke:var(--brand);transition:transform 200ms var(--ease-standard);flex:0 0 24px}
+  .faq-item[open] .faq-q .icon{transform:rotate(45deg)}
+  .faq-a{padding:0 24px 22px;color:var(--text-muted);font-size:16px;line-height:1.6}
+  .faq-item summary{list-style:none}
+  .faq-item summary::-webkit-details-marker{display:none}
+
+  /* Final CTA */
+  .final{background:var(--dark-bg);background-image:var(--sunset);color:#fff;text-align:center}
+  .final h2{margin-bottom:16px}
+  .final p{color:rgba(255,255,255,0.9);font-size:20px;max-width:600px;margin:0 auto 32px}
+
+  /* Footer */
+  footer{background:var(--ink);color:var(--dark-text-muted);padding:48px 0;font-size:14px}
+  footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  footer .wordmark{color:#fff;font-size:18px}
+
+  @media (max-width:768px){
+    section{padding:56px 0}
+    .hero{padding:80px 0}
+    h1,.display-1{font-size:48px}
+    .display-2{font-size:48px}
+    h2,.title-2{font-size:32px}
+    h3,.title-4{font-size:26px}
+    .day-head h3{font-size:26px}
+    .hero .lede,.body-lg{font-size:18px}
+    .cols,.sessions,.regan,.outcome-grid,.bonus-grid,.enrol-card{grid-template-columns:1fr}
+    .nav{display:none}
+    .enrol-details,.enrol-action{padding:32px}
+    .regan-photo{aspect-ratio:4/3}
+  }
+</style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="wrap">
+      <div class="wordmark">Mindvalley<span>.</span></div>
+      <nav class="nav">
+        <a href="#idea">The idea</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#regan">Regan</a>
+        <a href="#faq">Questions</a>
+      </nav>
+      <a class="btn btn-primary" href="#enrol">Claim your spot</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" data-mv-theme="dark">
+    <div class="wrap">
+      <span class="overline on-dark">Mindvalley live accelerator</span>
+      <h1>The Wealth Code</h1>
+      <p class="lede">Become a magnet for money. Two evenings, live with Regan Hillyer — to clear what caps your income and learn to receive wealth in flow.</p>
+      <div class="hero-meta">
+        <div>
+          <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          25 &amp; 26 July
+        </div>
+        <div>
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          7 hours live
+        </div>
+        <div>
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10a7 7 0 0114 0c0 5.65-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+          Live online · replays included
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-inverse btn-lg" href="#enrol">Claim your spot</a>
+        <a class="btn btn-ghost on-dark btn-lg" href="#agenda">See the agenda</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Big idea -->
+  <section class="bigidea" id="idea">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="overline">The premise</span>
+        <h2>You don't have a money problem. You have a <span class="accent">receiving</span> problem.</h2>
+        <p class="body-lg">Most people spend years forcing money — pushing, gripping, hustling for the next result. Regan Hillyer teaches the opposite: how to become an energetic match for wealth, so it stops being something you chase and starts being something you receive.</p>
+      </div>
+
+      <div class="cols">
+        <div class="reframe-card old card bordered">
+          <div class="tag">Manufactured manifestation</div>
+          <h3>Forcing it</h3>
+          <p class="body-md">The way most people relate to money — and why the ceiling never moves.</p>
+          <ul>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>Controlling every step of the outcome</li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>Hustle, grip, and the survival response</li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>Cortisol up, perception narrowed, contraction</li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>Wealth always one more push away</li>
+          </ul>
+        </div>
+        <div class="reframe-card new card">
+          <div class="tag">Surrendered manifestation</div>
+          <h3>Receiving it</h3>
+          <p class="body-md">The wealth code — being a match for it, so it comes to you.</p>
+          <ul>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Identity coherence — your whole system aligned</li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Receiving as your natural state</li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What you want begins to seek you</li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Money as an expression of who you've become</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agenda -->
+  <section class="outcomes" id="agenda" style="background:var(--bg)">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="overline">The two evenings</span>
+        <h2>What you'll do, hour by hour</h2>
+        <p class="body-lg">Eight live sessions across two evenings. Each one pairs real teaching with a guided activation, so the shift happens in the room — not weeks later.</p>
+      </div>
+
+      <div class="day-block">
+        <div class="day-head">
+          <h3>Day one — see it and clear it</h3>
+          <span class="when">25 July · 5–8pm · 3 hours</span>
+        </div>
+        <div class="sessions">
+          <div class="session"><span class="num">1</span><h4>The two wealth identities</h4><p class="body-md">Are you forcing money or receiving it? Find out where you sit — and what it's costing you.</p></div>
+          <div class="session"><span class="num">2</span><h4>Your financial set point</h4><p class="body-md">Why your income keeps returning to the same ceiling, and the inner block behind the outer one.</p></div>
+          <div class="session"><span class="num">3</span><h4>The inherited money ceiling</h4><p class="body-md">A live generational clearing of the money patterns you were handed — and may not even know are yours.</p></div>
+        </div>
+      </div>
+
+      <div class="day-block">
+        <div class="day-head">
+          <h3>Day two — become it and activate it</h3>
+          <span class="when">26 July · 5–9pm · 4 hours</span>
+        </div>
+        <div class="sessions">
+          <div class="session"><span class="num">4</span><h4>Where are you blocking the receiving?</h4><p class="body-md">Raise your minimum and your capacity to receive more, without guilt or grip.</p></div>
+          <div class="session"><span class="num">5</span><h4>The wealth formula</h4><p class="body-md">Regan's method for accelerated manifestation, applied directly to money — a tool you keep.</p></div>
+          <div class="session"><span class="num">6</span><h4>Fusing money and meaning</h4><p class="body-md">End the either/or between wealth and purpose, so the two start to feed each other.</p></div>
+          <div class="session"><span class="num">7</span><h4>The surrendered wealth identity</h4><p class="body-md">A guided activation to step into the version of you who already lives the result.</p></div>
+          <div class="session"><span class="num">8</span><h4>The master manifestor of wealth</h4><p class="body-md">Anchor one specific number and leave with a 30-day practice to make it your new normal.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regan -->
+  <section class="regan-section" id="regan" style="background:var(--bg-muted)">
+    <div class="wrap regan">
+      <!-- Replace this block with a square photo of Regan: <img src="regan.jpg" alt="Regan Hillyer" style="border-radius:16px"> -->
+      <div class="regan-photo"><span class="ph">Add a square photo of Regan here</span></div>
+      <div>
+        <span class="overline">Your teacher</span>
+        <h2>Regan Hillyer</h2>
+        <p class="body-lg">Regan is Mindvalley's lead author on manifesting and one of the most recognised teachers in the field. She has guided people around the world to change their relationship with money, identity and energy — fusing quantum science with practical inner work.</p>
+        <p class="body-md" style="margin-top:16px">This is the first time her wealth teaching has been built into a single, dedicated system — drawn from her work across Mindvalley's Manifesting Mastery, the Manifesting Summit, and her Art of Manifesting Quest.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcomes -->
+  <section class="outcomes">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="overline">What you walk away with</span>
+        <h2>Six shifts you can feel</h2>
+      </div>
+      <div class="outcome-grid">
+        <div class="outcome"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><p>Tell whether you're forcing or receiving wealth — and switch into the receiving state on demand.</p></div>
+        <div class="outcome"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><p>Find and clear your personal money ceiling, including the inherited layer.</p></div>
+        <div class="outcome"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><p>Raise your financial set point and your capacity to receive.</p></div>
+        <div class="outcome"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><p>Run Regan's wealth formula whenever you choose.</p></div>
+        <div class="outcome"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><p>Fuse money and meaning so wealth and purpose support each other.</p></div>
+        <div class="outcome"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><p>Install a daily wealth practice you actually keep using.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bonuses -->
+  <section style="background:var(--bg)">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="overline">Included when you join</span>
+        <h2>Three things to take home</h2>
+      </div>
+      <div class="bonus-grid">
+        <div class="card bonus"><span class="badge">Keep for life</span><h4>Wealth Frequency activation</h4><p class="body-md">A longer guided activation, yours to keep. Press play any morning to drop into the receiving state before your day begins.</p></div>
+        <div class="card bonus"><span class="badge">Daily practice</span><h4>30-day wealth protocol</h4><p class="body-md">A simple daily practice that turns a one-time shift into your new normal. This is how it sticks.</p></div>
+        <div class="card bonus"><span class="badge">Pre-work</span><h4>Money story primer</h4><p class="body-md">Short pre-work you get before day one, so the voice saying "I'm not ready for this" is handled before you begin.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enrol / logistics -->
+  <section class="enrol" id="enrol">
+    <div class="wrap">
+      <div class="enrol-card">
+        <div class="enrol-details">
+          <span class="overline">The details</span>
+          <h2>Reserve your place</h2>
+          <div class="detail-row"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><div><div class="k">Day one</div><div class="v">25 July · 5–8pm · See it and clear it</div></div></div>
+          <div class="detail-row"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><div><div class="k">Day two</div><div class="v">26 July · 5–9pm · Become it and activate it</div></div></div>
+          <div class="detail-row"><svg class="icon" viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><div><div class="k">Where</div><div class="v">Live online with Regan. Replays of both days included.</div></div></div>
+          <div class="detail-row"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20h9M3 20h4M3 4h18v12H3z"/></svg><div><div class="k">What to bring</div><div class="v">A quiet space, a journal, and headphones for the activations.</div></div></div>
+        </div>
+        <div class="enrol-action" data-mv-theme="dark">
+          <span class="badge orange">Live seats are limited</span>
+          <div class="price">$[PRICE]<small> / one payment</small></div>
+          <p class="fine">Full access to both live evenings, replays, and all three bonuses.</p>
+          <a class="btn btn-inverse btn-lg" href="[ENROLMENT_LINK]">Claim your spot</a>
+          <p class="fine">One click and you're in the room with Regan on the 25th.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="section-head" style="margin:0 auto 48px;text-align:center">
+        <span class="overline">Questions</span>
+        <h2>Good to know</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item"><summary class="faq-q">Do I need experience with manifesting?<svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="faq-a">No. The money story primer brings you up to speed before day one, and Regan teaches every step live. Beginners and long-time students get value from the same sessions.</div></details>
+        <details class="faq-item"><summary class="faq-q">What if I can't attend live?<svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="faq-a">Replays of both evenings are included, so you can take part on your own schedule. The live sessions are where the activations land best, so attend what you can.</div></details>
+        <details class="faq-item"><summary class="faq-q">Is this just theory?<svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="faq-a">No. Every session pairs teaching with a guided activation and a practical exercise. You leave with a felt shift and a daily practice, not just notes.</div></details>
+        <details class="faq-item"><summary class="faq-q">How is this different from Regan's other programmes?<svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="faq-a">This is the first time her work is built into a dedicated wealth system — focused entirely on money, your set point, and the inherited ceiling, rather than manifesting in general.</div></details>
+        <details class="faq-item"><summary class="faq-q">What do I actually need on the day?<svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><div class="faq-a">A quiet space where you won't be interrupted, a journal and pen for the written work, and headphones for the activations.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final" data-mv-theme="dark">
+    <div class="wrap">
+      <span class="overline on-dark" style="color:#fff">25 &amp; 26 July</span>
+      <h2 style="margin-top:16px">Two evenings that change how you receive</h2>
+      <p>Clear the ceiling. Build the identity. Walk out a match for the wealth you've been chasing.</p>
+      <a class="btn btn-inverse btn-lg" href="#enrol">Claim your spot</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="wordmark">Mindvalley<span style="color:var(--brand-bright)">.</span></div>
+      <div>The Wealth Code — live accelerator with Regan Hillyer · 25 &amp; 26 July</div>
+    </div>
+  </footer>
+
+</body>
+</html>
